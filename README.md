@@ -59,6 +59,32 @@ class Solution {
 };
 
 4.Remove duplicates from Sorted Array
+class Solution {
+  public:
+    vector<int> removeDuplicates(vector<int> &arr) {
+        int i=0;
+        for(int j=1;j<arr.size();j++){
+            if(arr[i]!=arr[j]){
+                i++;
+                arr[i]=arr[j];
+            }
+        }
+        arr.resize(i+1);
+        return arr;
+    }
+};
+
+5.Left Rotate an array by one place(Reversal Algorithm)
+class Solution {
+  public:
+    void leftRotate(vector<int>& arr, int d) {
+        int n=arr.size();
+        d%=n;
+        reverse(arr.begin(),arr.begin()+d);
+        reverse(arr.begin()+d,arr.end());
+        reverse(arr.begin(),arr.end());
+    }
+};
 
 
 
