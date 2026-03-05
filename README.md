@@ -198,7 +198,7 @@ public:
     }
 };
 
-11.Maximum Consecutive Ones
+11.(a)Maximum Consecutive Ones
 class Solution {
 public:
     int findMaxConsecutiveOnes(vector<int>& nums) {
@@ -212,6 +212,28 @@ public:
             }
         }
         return maxi;  
+    }
+};
+
+11.(b)Maximize number of 1's
+class Solution {
+  public:
+    int maxOnes(vector<int>& arr, int k) {
+        int zeroCount=0;
+        int left=0,maxi=0;
+        for(int right=0;right<arr.size();right++){
+            if(arr[right]==0){
+                zeroCount++;
+            }
+            while(zeroCount>k){
+                if(arr[left]==0){
+                   zeroCount--;
+                }
+                 left++;
+            }
+            maxi=max(maxi,right-left+1);
+        }
+        return maxi;
     }
 };
 
