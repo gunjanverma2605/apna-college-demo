@@ -133,12 +133,12 @@ class Solution {
         vector<int> ans;
         while(i<a.size() && j<b.size()){
             if(a[i]<=b[j]){
-                if(ans.size()==0 || ans.back()!=a[i])
+                if(ans.empty() || ans.back()!=a[i])
                     ans.push_back(a[i]);
                     i++;
             }
             else{
-                if(ans.size()==0 || ans.back()!=b[j])
+                if(ans.empty() || ans.back()!=b[j])
                     ans.push_back(b[j]);
                     j++;
             }
