@@ -74,7 +74,19 @@ class Solution {
     }
 };
 
-5.Left Rotate an array by one place(Reversal Algorithm)
+5.Left Rotate an array by one place
+class Solution {
+  public:
+    void rotate(vector<int> &arr) {
+        int first = arr[0];
+        for(int i = 1; i < arr.size(); i++) {
+            arr[i-1] = arr[i];
+        }
+        arr[n-1] = first;
+    }
+};
+
+6.Left Rotate an array by D places(Reversal Algorithm)
 class Solution {
   public:
     void leftRotate(vector<int>& arr, int d) {
@@ -85,6 +97,7 @@ class Solution {
         reverse(arr.begin(),arr.end());
     }
 };
+
 
 
 
